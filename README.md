@@ -83,3 +83,58 @@ Input Saved. Normal Termination.
 ...............................................................................
 ```
 
+3. Your input file is created and can now be submit to a Gaussian 16 calculation. Once the job is done, go to `NICS-2D_extractor.py` instructions. 
+
+
+### `NICS-2D_extractor.py`
+
+1. Ensure you have the output file in your working folder.
+2. Run the following command in your terminal:
+
+    ```shell
+    python NICS-2D_extractor.py
+    ```
+   This command will open an interactive Python script that simplifies the extraction process. The script will guide you through the extraction of the desired NICS values. The available extraction options are as follows:
+    1. **IMS**: Extract the absolute value of the isotropic magnetic shielding.
+    2. **MSzz**: Extract the ZZ component of the absolute value of the decomposed magnetic shielding.
+    3. **NICSiso**: Extract isotropic NICS values.
+    4. **NICSzz**: Extract the ZZ component of the decomposed NICS values.
+
+   Choose the option that best suits your analysis.
+
+For example, here is a command for extracting NICSzz from the benzene output file:
+
+```shell
+...............................................................................
+.                                                                             .
+.                              NICS-2D extractor                              .
+.                         Sept. 01 2022 (Lucas Karas)                         .
+.                                                                             .
+...............................................................................
+
+Reading the Gaussian output file:
+
+Enter the output name: 
+benzene.out
+
+Checking the output file...
+NMR keyword found in the output. Proceed.
+Bq atom found in the output. Proceed.
+
+Bq coordinates successfully archived.
+
+Magnetic shieldings successfully archived.
+
+Gaussian output closed! :D
+
+...............................................................................
+Choose between (1) IMS; (2) MSzz; (3) NICSiso; or (4) NICSzz: 
+4
+
+Name your NICS-2D file (e.g., benzene): benzene
+
+Preparing the NICSzz data.
+
+Normal Termination!
+```
+
